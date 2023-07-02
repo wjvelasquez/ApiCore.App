@@ -5,10 +5,12 @@ using System.Data.SqlClient;
 using ApiCore.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ApiCore.Controllers;
 [EnableCors("CorsRules")]
 [Route("api/[controller]")]
+[Authorize]
 [ApiController]
 public class ProductController : ControllerBase
 {
